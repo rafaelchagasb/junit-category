@@ -12,20 +12,21 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.surfire.plugin>2.19.1</version.surfire.plugin>
 	</properties>
 
 	<build>
 		<plugins>
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.18.1</version>
+				 <version>${version.surfire.plugin}</version>
 				<configuration>
 					<excludedGroups>br.com.rafaelchagasb.junit.junit_category.IIntegrationTest</excludedGroups>
 				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>2.18.1</version>
+				<version>${version.surfire.plugin}</version>
 				<configuration>
 					<includes>
 						<include>**/*.java</include>
@@ -36,7 +37,6 @@
 					<execution>
 						<goals>
 							<goal>integration-test</goal>
-							<goal>verify</goal>
 						</goals>
 					</execution>
 				</executions>
